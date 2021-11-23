@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+
     private Rigidbody2D rb2D;
     public float xSpeed, jumpForce;
     public GroundCheck groundcheck;
@@ -20,7 +21,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && groundcheck.isOnTheGround)
         {
-            rb2D.AddForce(new Vector2(1f, jumpForce), ForceMode2D.Impulse);
+            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
 }
