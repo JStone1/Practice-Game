@@ -10,7 +10,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.tag == "Ground")
         {
             isOnTheGround = true;
         }
@@ -18,7 +18,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.tag == "Ground")
         {
             isOnTheGround = false;
         }
