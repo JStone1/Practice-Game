@@ -6,12 +6,11 @@ using UnityEngine;
 public class GroundDestroy : MonoBehaviour
 {
 
-    public Tilemap tiles;
     public Tile tile;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9 || collision.gameObject.layer == 10)
         {
             print("Collision enter");
             Destroy(collision.gameObject);
@@ -28,4 +27,5 @@ public class GroundDestroy : MonoBehaviour
     void Update()
     {
     }
+
 }
