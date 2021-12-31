@@ -10,10 +10,14 @@ public class CharacterController : MonoBehaviour
     public float xSpeed, jumpForce;
     public GroundCheck groundcheck;
 
+    public int maxHealth = 3;
+    public int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2D = this.GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -26,6 +30,12 @@ public class CharacterController : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
 
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 
 }
