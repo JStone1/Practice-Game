@@ -10,9 +10,9 @@ public class CharacterController : MonoBehaviour
     public float xSpeed, jumpForce;
     public GroundCheck groundcheck;
 
-    public int maxGroundScore = 100;
-    public int maxEnemyScore = 3;
-    public int currentGroundScore = 0;
+    public int maxGroundScore;
+    public int maxEnemyScore;
+    public int currentGroundScore;
     public int currentEnemyScore;
 
     // Start is called before the first frame update
@@ -21,6 +21,8 @@ public class CharacterController : MonoBehaviour
         rb2D = this.GetComponent<Rigidbody2D>();
         currentGroundScore = 0;
         currentEnemyScore = 0;
+        maxGroundScore = 47;
+        maxEnemyScore = 3;
     }
 
     // Update is called once per frame
