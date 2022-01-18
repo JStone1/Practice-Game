@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
 
     public int maxGroundScore = 100;
     public int maxEnemyScore = 3;
-    public int currentGroundScore;
+    public int currentGroundScore = 0;
     public int currentEnemyScore;
 
     // Start is called before the first frame update

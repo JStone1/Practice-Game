@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GroundDestroy : MonoBehaviour
 {
-
     public Tile tile;
     public Score score;
 
@@ -15,8 +14,6 @@ public class GroundDestroy : MonoBehaviour
         {
             print("Collision enter");
             Destroy(collision.gameObject);
-            score.groundScore++;
-            Debug.Log(score.groundScore);
         }
     }
 
