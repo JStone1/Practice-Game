@@ -10,7 +10,7 @@ public class HealthPickUp : MonoBehaviour
         CharacterController controller = other.GetComponent<CharacterController>();
         if(controller != null)
         {
-            controller.ChangeHealth(1);
+            controller.ChangeGroundScore(1);
             Destroy(gameObject);
         }
     }

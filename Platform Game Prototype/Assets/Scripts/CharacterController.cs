@@ -10,14 +10,17 @@ public class CharacterController : MonoBehaviour
     public float xSpeed, jumpForce;
     public GroundCheck groundcheck;
 
-    public int maxHealth = 3;
-    public int currentHealth;
+    public int maxGroundScore = 100;
+    public int maxEnemyScore = 3;
+    public int currentGroundScore;
+    public int currentEnemyScore;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2D = this.GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
+        currentGroundScore = 0;
+        currentEnemyScore = 0;
     }
 
     // Update is called once per frame
@@ -32,10 +35,16 @@ public class CharacterController : MonoBehaviour
 
     }
 
-    public void ChangeHealth(int amount)
+    public void ChangeGroundScore(int amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        currentGroundScore = Mathf.Clamp(currentGroundScore + amount, 0, maxGroundScore);
+        Debug.Log(currentGroundScore + "/" + maxGroundScore);
+    }
+
+    public void ChangeEnemyScore (int amount)
+    {
+        currentEnemyScore = Mathf.Clamp(currentEnemyScore + amount, 0, maxEnemyScore);
+        Debug.Log(currentEnemyScore + "/" + maxEnemyScore);
     }
 
 }

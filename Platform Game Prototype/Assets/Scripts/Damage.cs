@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        Debug.Log("Collided with enemy");
+    //        Destroy(gameObject);
+    //    }
+    //}
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Enemy")
+        CharacterController controller = other.GetComponent<CharacterController>();
+        if (controller != null)
         {
-            Debug.Log("Collided with enemy");
+            controller.ChangeEnemyScore(1);
             Destroy(gameObject);
         }
     }

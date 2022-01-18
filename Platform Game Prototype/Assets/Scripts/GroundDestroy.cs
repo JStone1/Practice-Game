@@ -7,6 +7,7 @@ public class GroundDestroy : MonoBehaviour
 {
 
     public Tile tile;
+    public Score score;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -14,6 +15,8 @@ public class GroundDestroy : MonoBehaviour
         {
             print("Collision enter");
             Destroy(collision.gameObject);
+            score.groundScore++;
+            Debug.Log(score.groundScore);
         }
     }
 
