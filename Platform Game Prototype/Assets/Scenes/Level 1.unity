@@ -3303,6 +3303,8 @@ MonoBehaviour:
   controller: {fileID: 1946694667}
   groundText: {fileID: 1691273347}
   enemyText: {fileID: 638499336}
+  grassScore: {fileID: 1691273347}
+  enemyScore: {fileID: 638499336}
 --- !u!114 &638499336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3593,7 +3595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &650238257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3669,6 +3671,7 @@ GameObject:
   - component: {fileID: 665926528}
   - component: {fileID: 665926530}
   - component: {fileID: 665926529}
+  - component: {fileID: 665926531}
   m_Layer: 5
   m_Name: Grass Score
   m_TagString: Untagged
@@ -3728,7 +3731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 39 / 50
+  m_Text: 
 --- !u!222 &665926530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3737,6 +3740,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665926527}
   m_CullTransparentMesh: 1
+--- !u!114 &665926531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665926527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db5670d258821b419a518e6df7c6a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1946694667}
+  groundText: {fileID: 1691273347}
+  enemyText: {fileID: 638499336}
+  grassScore: {fileID: 665926529}
+  enemyScore: {fileID: 1457441459}
 --- !u!1001 &674879987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4066,6 +4086,19 @@ MonoBehaviour:
     m_Extent: {x: 0.64632314, y: 0.54902506, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!114 &723988606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723988603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
 --- !u!1001 &742189346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9400,7 +9433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4 / 5
+  m_Text: 
 --- !u!222 &1457441460
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10294,6 +10327,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1531279269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531279265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
 --- !u!1 &1537447415 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 258050487929342394, guid: 7487bf14375eeb34ca61cc4b68ecb779, type: 3}
@@ -10390,7 +10436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541261954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.5, y: 5, z: 0}
+  m_LocalPosition: {x: 19, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10591,7 +10637,7 @@ GameObject:
   - component: {fileID: 1601191795}
   - component: {fileID: 1601191794}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10963,6 +11009,8 @@ MonoBehaviour:
   controller: {fileID: 1946694667}
   groundText: {fileID: 1691273347}
   enemyText: {fileID: 638499336}
+  grassScore: {fileID: 1691273347}
+  enemyScore: {fileID: 638499336}
 --- !u!1001 &1706772783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12076,6 +12124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 2
   winScreenUI: {fileID: 650238256}
+  win: {fileID: 0}
 --- !u!4 &1827154939
 Transform:
   m_ObjectHideFlags: 0
@@ -13602,6 +13651,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2027645673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027645670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
 --- !u!1001 &2044886048
 PrefabInstance:
   m_ObjectHideFlags: 0

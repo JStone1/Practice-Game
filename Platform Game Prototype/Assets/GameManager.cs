@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 1f;
 
     public GameObject winScreenUI;
+    public WinUI win;
 
     public void WinLevel ()
     {
         winScreenUI.SetActive(true);
+        win.displayScore();
     }
 
     public void GameOver()
