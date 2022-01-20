@@ -8,13 +8,22 @@ public class GameManager : MonoBehaviour
 
     bool gameIsOver = false;
 
+    public float restartDelay = 1f;
+
+    public GameObject winScreenUI;
+
+    public void WinLevel ()
+    {
+        winScreenUI.SetActive(true);
+    }
+
     public void GameOver()
     {
         if (gameIsOver == false)
         {
             gameIsOver = true;
             Debug.Log("GAME OVER");
-            Restart();
+            Invoke("Restart", restartDelay);
         }
 
     }
