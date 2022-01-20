@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+
+    public CharacterController movement;
     private void OnTriggerEnter2D(Collider2D other)
     {
         CharacterController controller = other.GetComponent<CharacterController>();
@@ -19,6 +21,8 @@ public class Damage : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+            FindObjectOfType<GameManager>().GameOver();
+            
         }
     }
 }

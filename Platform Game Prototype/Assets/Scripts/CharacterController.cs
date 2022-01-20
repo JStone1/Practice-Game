@@ -35,6 +35,11 @@ public class CharacterController : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
 
+        if (rb2D.position.y < 0f)
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
+
     }
 
     public void ChangeGroundScore(int amount)
