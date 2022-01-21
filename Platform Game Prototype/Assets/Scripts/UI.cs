@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     public CharacterController controller;
+    public Timer time;
     public Text groundText;
     public Text enemyText;
     public Text grassScore;
     public Text enemyScore;
+    public Text timerScore;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,6 @@ public class UI : MonoBehaviour
 
         grassScore.text = controller.currentGroundScore.ToString() + " / " + controller.maxGroundScore.ToString();
         enemyScore.text = controller.currentEnemyScore.ToString() + " / " + controller.maxEnemyScore.ToString();
+        //timerScore.text = time.minutes.ToString() + ":" + time.seconds.ToString();
     }
 }
