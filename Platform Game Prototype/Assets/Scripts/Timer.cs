@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     public Text text;
     float time;
     public float speed = 1;
-    bool playing;
+    bool playing = true;
     public string minutes;
     public string seconds;
 
@@ -21,10 +21,13 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime * speed;
-        minutes = Mathf.Floor(time % 3600/60).ToString("00");
-        seconds = (time % 60).ToString("00");
-        text.text = minutes + ":" + seconds;
+        if (playing == true)
+        {
+            time += Time.deltaTime * speed;
+            minutes = Mathf.Floor(time % 3600 / 60).ToString("00");
+            seconds = (time % 60).ToString("00");
+            text.text = minutes + ":" + seconds;
+        }
     }
 
     public void startTimer()

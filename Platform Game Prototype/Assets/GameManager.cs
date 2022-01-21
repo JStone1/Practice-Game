@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject winScreenUI;
     public WinUI win;
+    Timer timer;
 
     public void WinLevel ()
     {
         winScreenUI.SetActive(true);
-        win.displayScore();
     }
 
     public void GameOver()
