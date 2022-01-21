@@ -21,8 +21,8 @@ public class CharacterController : MonoBehaviour
         rb2D = this.GetComponent<Rigidbody2D>();
         currentGroundScore = 0;
         currentEnemyScore = 0;
-        maxGroundScore = 47;
-        maxEnemyScore = 3;
+        maxGroundScore = 50;
+        maxEnemyScore = 5;
     }
 
     // Update is called once per frame
