@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             gameIsOver = true;
             Debug.Log("GAME OVER");
+            inGameStatsUI.SetActive(false);
             deathUI.SetActive(true);
             Invoke("Restart", restartDelay);
         }

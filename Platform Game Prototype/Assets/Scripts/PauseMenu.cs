@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public AudioSource music;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,16 +30,18 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        IsPaused = false;
+        music.Play();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        IsPaused = false;
     }
 
     void Pause()
     {
+        IsPaused = true;
+        music.Pause();
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        IsPaused = true;
     }
 
     public void LoadMenu()
