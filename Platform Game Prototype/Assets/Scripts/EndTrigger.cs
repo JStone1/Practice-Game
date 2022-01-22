@@ -10,5 +10,6 @@ public class EndTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameManager.WinLevel();
+        Time.timeScale = 0f;
     }
 }
