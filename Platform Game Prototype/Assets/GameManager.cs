@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject winScreenUI;
     public GameObject inGameStatsUI;
+    public GameObject deathUI;
     public WinUI win;
     Timer timer;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             gameIsOver = true;
             Debug.Log("GAME OVER");
+            deathUI.SetActive(true);
             Invoke("Restart", restartDelay);
         }
 
