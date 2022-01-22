@@ -7,12 +7,14 @@ public class GroundDestroy : MonoBehaviour
 {
     public Tile tile;
     public Score score;
+    public AudioSource sound;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 9 || collision.gameObject.layer == 11)
         {
             print("Collision enter");
+            sound.Play();
             Destroy(collision.gameObject);
         }
     }

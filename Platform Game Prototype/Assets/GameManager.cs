@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject inGameStatsUI;
     public GameObject deathUI;
     public WinUI win;
-    Timer timer;
+    public AudioSource sound;
 
     public void WinLevel ()
     {
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             gameIsOver = true;
             Debug.Log("GAME OVER");
+            sound.Play();
             inGameStatsUI.SetActive(false);
             deathUI.SetActive(true);
             Invoke("Restart", restartDelay);

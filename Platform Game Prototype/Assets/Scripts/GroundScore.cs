@@ -5,11 +5,14 @@ using UnityEngine;
 public class GroundScore : MonoBehaviour
 {
 
+    public AudioSource sound;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         CharacterController controller = other.GetComponent<CharacterController>();
         if(controller != null)
         {
+            sound.Play();
             controller.ChangeGroundScore(1);
             Destroy(gameObject);
         }
