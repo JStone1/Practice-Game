@@ -11,13 +11,11 @@ public class WinUI : MonoBehaviour
     public Text groundScore;
     public Text enemyScore;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
 
