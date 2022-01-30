@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameIsOver == false) // checks if game is over
         {
-            gameIsOver = true; // set bool to treu - player has died
+            gameIsOver = true; // set bool to true - player has died
             sound.Play(); // play the player death sound
             inGameStatsUI.SetActive(false); // disable the in game stats UI
             deathUI.SetActive(true); // enable the death screen UI

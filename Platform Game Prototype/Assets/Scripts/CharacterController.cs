@@ -15,6 +15,8 @@ public class CharacterController : MonoBehaviour
     public int currentGroundScore;
     public int currentEnemyScore;
 
+    public AudioSource playerDeathAudio;
+
     // Start is called before the first frame update
     void Start()
     {
