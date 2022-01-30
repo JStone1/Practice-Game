@@ -7522,7 +7522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 0}
@@ -11811,7 +11810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 0}
@@ -15167,7 +15165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 0}
@@ -15578,7 +15575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 0}
@@ -18817,7 +18813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 1786111687}
@@ -19814,7 +19809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2b966382cdb341bec822f208a5b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
   playerDeathAudio: {fileID: 143148720}
   enemyDeathAudio: {fileID: 1061452892}
   camera: {fileID: 0}
