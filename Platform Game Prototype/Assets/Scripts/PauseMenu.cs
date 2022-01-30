@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool IsPaused = false; // bool to check if the game is paused
+    public bool GamePaused = false; // bool to check if the game is paused
 
     // public references to gameobjects referenced in Unity - in this case it's the pause menu UI and game stats that are displayed while playing
     public GameObject pauseMenuUI;
@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // checks if escape key is pressed
         {
-            if (IsPaused) // checks if bool is set to true - meaning the game is currently paused
+            if (GamePaused) // checks if bool is set to true - meaning the game is currently paused
             {
                 Resume(); // call resume function if game is paused
             }
@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     // function that resumes the game
     public void Resume()
     {
-        IsPaused = false; // change bool to false to say game is not paused
+        GamePaused = false; // change bool to false to say game is not paused
         music.Play(); // continue playing game background music
         pauseMenuUI.SetActive(false); // disable the pause menu UI
         inGameStatsUI.SetActive(true); // enable the in game stats UI
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     // function that pauses the game
     public void Pause()
     {
-        IsPaused = true; // change bool to true to say game is paused
+        GamePaused = true; // change bool to true to say game is paused
         music.Pause(); // pause the audio source (background music)
         pauseMenuUI.SetActive(true); // enable the pause menu UI
         inGameStatsUI.SetActive(false); // disable the in game stats UI
